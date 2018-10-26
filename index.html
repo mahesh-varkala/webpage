@@ -9,59 +9,49 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
 	<title>webpage</title>
 </head>
 
 <body>
-	<div class="d-flex">
+	<div class="m-0 flex">
 
 		<!-- ----------------Drawer----------------------- -->
 
-		<div class="d-flex flex-column bg-warning">
-			<!--  flex-grow-1  -->
+		<div class="d-flex flex-column flex-grow-1 bg-warning">
 			<div class="d-flex justify-content-center">
-				<h4 class="pt-5 text-white px-3"> LEAD SENSE</h4>
+				<div class="pt-5">
+					<div class="p-1 bg-primary" style="border-radius: 5px">LS</div>
+				</div>
+				<h4 class="pt-5 px-3 text-white"> LEAD SENSE</h4>
 			</div>
 			<div class="py-1">
 				<hr>
 			</div>
 			<div class="px-3">
-				<nav class="navbar navbar-expand-sm">
-					<ul class="nav flex-column">
-						<li class="nav-item">
-							<a class="nav-link text-white " href="#">DASHBOARD</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">ANALYTICS</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">PAID MARKETING</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">SEO</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">CONTENT</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">LEAD NINJA</a>
-						</li>
-					</ul>
-				</nav>
+				<ul class="nav px-3 flex-column">
+					<button class="drawerButton" type="button" onclick="onClickButton();">DASHBOARD</button>
+					<button class="drawerButton" type="button" onclick="onClickButton();">ANALYTICS</button>
+					<button class="drawerButton" type="button" onclick="onClickButton();">PAID MARKETING</button>
+					<button class="drawerButton" type="button" onclick="onClickButton();">SEO</button>
+					<button class="drawerButton" type="button" onclick="onClickButton();">CONTENT</button>
+					<button class="drawerButton" type="button" onclick="onClickButton();">LEAD NINJA</button>
+				</ul>
 			</div>
 			<br>
 		</div>
 
 
-		<!-- ------------------------DASHBOARD----------------------------- -->
+		<!-- ------------------------DASHBOARD( UPPER RIGHT BLUE BOX )----------------------------- -->
 		<div class="d-flex flex-column flex-grow-1">
 			<div class="d-flex flex-column bg-primary flex-grow-1">
 
 				<!-- ------------search bar and icons----------------- -->
 
 				<div class="mx-5 d-flex flex-row align-items-start justify-content-end">
-					<div class="m-1 flex">
+					<div class="mt-1 flex">
 						<input type="text" class="px-2" placeholder="search...">
 						<!-- <ion-icon class="form-control-feedback" name="search"></ion-icon> -->
 					</div>
@@ -72,24 +62,24 @@
 					</div>
 				</div>
 
-				<!-- ----------------tab bar------------------------ -->
+				<!-- ----------------NAV BAR------------------------ -->
 
-				<div class="d-flex justify-content-center">
+				<div class="m-0 d-flex justify-content-center">
 					<nav class="navbar navbar-expand-sm">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="mx-3 nav-link text-white" href="#">Keyboard Ranks</a>
+								<a class="mx-3 nav-link-xs text-white" href="#">Keyboard Ranks</a>
 							</li>
 							<li class="nav-item">
-								<a class="mx-3 nav-link text-white" href="#">Competitors</a>
+								<a class="mx-3 nav-link-xs text-white" href="#">Competitors</a>
 							</li>
 						</ul>
 					</nav>
 				</div>
 
-				<!-- --------------------------Dropdown--------------------------- -->
+				<!-- --------------------------DROPDOWNS BAR--------------------------- -->
 
-				<div class="my-1 d-flex">
+				<div class="my-2 d-flex">
 					<div class="d-flex flex-row justify-content-start">
 						<div class="mx-3 dropdown">
 							<button class="btn btn-secondary dropdown-toggle bg-primary border-white" type="button" id="dropdownMenuButton"
@@ -128,7 +118,7 @@
 					</div>
 
 					<div class="mx-5 d-flex flex-grow-1 justify-content-end">
-						<button class=" border-white btn text-white bg-warning" type="button" onclic>
+						<button class="b border-white btn text-white bg-warning" type="button" onclick="onClickButton();">
 							Export to CSV
 						</button>
 					</div>
@@ -136,45 +126,45 @@
 			</div>
 
 			<!-- ------------------------GRAPH------------------------------------ -->
-			<!-- <div class="m3"> -->
-			<div class="m3 d-flex bg-primary">
-				<canvas id="lineChart" height="100" width="=100"></canvas>
+
+			<div class="m3 pt-2 d-flex bg-primary">
+				<canvas id="lineChart" height="50" width="=100"></canvas>
 			</div>
-			<!-- </div> -->
-
 			<!-- ---------------------------TABLE------------------------------------- -->
-
-			<div class="d-flex">
-				<table class="table table-striped" id="apiTableData">
-					<thead>
-						<tr>
-							<th>Keywords</th>
-							<th>Position</th>
-							<th>Change</th>
-							<!-- <th>URL</th> -->
-						</tr>
-					</thead>
-					<!-- <tr>
-						<td>m</td>
-						<td>m</td>
-						<td>m</td>
-					</tr>
-					<tr>
-						<td>m</td>
-						<td>m</td>
-						<td>m</td>
-					</tr>
-					<tr>
-						<td>m</td>
-						<td>m</td>
-						<td>m</td>
-					</tr>
-					<tr>
-						<td>m</td>
-						<td>m</td>
-						<td>m</td> -->
-					</tr>
-				</table>
+			<div class="m-1 d-flex flex-column">
+				<div class="m-1 d-flex">
+					<div class="mx-3 my-1">Enter Keyword :</div>
+					<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter keyword" title="Type in a name">
+					<div class="mx-3 my-1">Assign to Group :</div>
+					<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Group (optional)" title="Type in a name">
+					<button class="b mx-5 btn-xs text-white bg-warning" type="button" onclick="onClickButton();">+ Add</button>
+					<div class="mx-3 dropdown">
+						Show <button class="b btn-xs btn-secondary dropdown-toggle bg-primary border-white" type="button" id="dropdownMenuButton"
+						 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							25
+						</button> Entries
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="#">10</a>
+							<a class="dropdown-item" href="#">25</a>
+							<a class="dropdown-item" href="#">50</a>
+						</div>
+					</div>
+				</div>
+				<div class="mx-3" style="  flex: 1; max-height: 200px; max-width: 100%; overflow-y: auto;">
+					<table class="table table-bordered table-striped" id="apiTableData">
+						<thead>
+							<tr>
+								<th scope="col">Keywords</th>
+								<th scope="col">Position</th>
+								<th scope="col">Change</th>
+								<th scope="col">URL</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<!-- <div class="flex align-items-end flex-grow-1	bg-primary"> -->
+				<p style="text-align: center"> Copyright c 2008 Leadsense. All rights reserved </p>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>
@@ -189,33 +179,69 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	 crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
+	<!--used for icon -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!--used for ajax-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<!--used for graph-->
 	<script src="js/main.js"></script>
+	<!-- <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
+
+	<!-- ---------------------------DATA FROM API INTO TABLE----------------------- -->
+
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$.ajax({
 				url: 'http://api.jsonbin.io/b/5b893aa03ffac56f4bd7905a',
-				// url:'https://www.w3schools.com/js/json_demo.txt',
-				dataType: 'json',
 				type: 'GET',
+				dataType: 'json',
 				cache: false,
 				success: function (data) {
-					var tableData = '';
-					$.each(data, function (index, value) {
+					var tableData = '<tbody>';
+					$.each(data.data, function (index, value) {
 						tableData += '<tr>';
-						tableData += '<td' + value.keyword + '</td>';
-						tableData += '<td' + value.position + '</td>';
-						tableData += '<td' + value.change + '</td>';
+						tableData += '<td>' + value.keyword + '</td>';
+						tableData += '<td>' + value.position + '</td>';
+						tableData += '<td>' + value.change + '</td>';
+						tableData += '<td>/research-report/asia-compound-</td>';
 						tableData += '</tr>';
 					});
+					tableData += '</tbody>';
 					$('#apiTableData').append(tableData);
+					// console.log(tableData);
 				},
 				error: function (error) {
 					alert(error);
 				}
 			});
 		});
+	</script>
+
+	<!-- ------------------------TABLE SEARCH------------------------------- -->
+
+	<script>
+		function myFunction() {
+			var input, filter, table, tr, td, i;
+			input = document.getElementById("myInput");
+			filter = input.value.toUpperCase();
+			table = document.getElementById("apiTableData");
+			tr = table.getElementsByTagName("tr");
+			for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[0];
+				if (td) {
+					if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+					} else {
+						tr[i].style.display = "none";
+					}
+				}
+			}
+		}
+	</script>
+	<script>
+		function onClickButton() {
+			alert('Under Development');
+		}
 	</script>
 </body>
 

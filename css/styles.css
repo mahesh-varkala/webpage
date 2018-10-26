@@ -1,0 +1,27 @@
+.scrolltable {
+  /* display: block; */
+  flex: 1;
+  max-height: 200px;
+  max-width: 100%;
+  overflow-y: auto;
+}
+tr{
+  line-height: 3px;
+}
+.b{
+  border: none;
+  border-radius: 50px;
+}
+.drawerButton{
+  height: 50px;
+  background: none;
+  text-align: left;
+  border: 0px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+.drawerButton:hover{
+  text-align: center;
+  background: #007bff;
+}

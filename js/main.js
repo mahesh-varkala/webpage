@@ -1,31 +1,31 @@
+AllKeysData = [];
 var chart = $("#lineChart");
-console.log(chart);
-Chart.defaults.global.elements.point.pointStyle = 'dash';
 let lineChart = new Chart(chart, {
 	type: 'line',
 	data: {
-		labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN',],
+		labels: ['2018-09-05', '2018-09-05', '2018-09-05', '2018-09-05', '2018-09-05',
+			'2018-09-05', '2018-09-05', '2018-09-05', '2018-09-05', '2018-09-05'
+		],
 		// pointStyle: dash,
-
 		datasets: [
 			{
 				label: "Keyword 1",
 				borderColor: 'red',
-				// fill: false,
+				fill: false,
 				pointBackgroundColor: 'blue',
-				data: [10, 20, 80, 50, 40, 90]
+				data: []
 			}, {
 				label: "Keyword 2",
 				borderColor: 'blue',
 				fill: false,
 				pointBackgroundColor: 'blue',
-				data: [30, 20, 70, 50, 40, 10]
+				data: []
 			}, {
 				label: "Keyword 3",
 				borderColor: 'yellow',
 				fill: false,
 				pointBackgroundColor: 'blue',
-				data: [60, 70, 30, 10, 60, 30]
+				data: []
 			}, {
 				label: "Keyword 4",
 				borderColor: 'green',
@@ -58,4 +58,36 @@ let lineChart = new Chart(chart, {
 			}]
 		}
 	}
+});
+
+function getData() {
+	//Each dataset data is updated
+	for (let i = 0; i < AllKeysData.length; i++) {
+		lineChart.data.datasets[i].data = AllKeysData[i];
+	}
+	lineChart.update();
+}
+
+$(document).ready(function () {
+	$.ajax({
+		url: 'http://api.jsonbin.io/b/5b893b00db948c68635a04eb',
+		dataType: 'json',
+		success: function (graphData) {
+			var keys = ["keyword 1", "keyword 2", "keyword 3", "keyword 4"];
+			var keyIndex = [];
+			for (let i = 0; i < keys.length; i++) {
+				keyIndex[i] = Object.assign({}, graphData[keys[i]]);
+			}
+			console.log(keyIndex[0].points[1]);
+			for (let i = 0; i < keys.length; i++) {
+				var dataPoints = [];
+				for (let j = 0; j < keyIndex[0].points.length; j++) {
+					dataPoints.push(keyIndex[i].points[j]);
+				}
+				AllKeysData.push(dataPoints);
+			}
+			getData();
+			console.log(AllKeysData);
+		}
+	});
 });
