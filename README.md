@@ -1,4 +1,4 @@
-# An HTML webpage which loads data into a graph with data points and a table with its values from API. 
+## An HTML webpage which loads data into a graph with data points and a table with its values from API. 
 ### Frameworks & Methodologies:
 <ul>
   <li>Bootstrap</li>
