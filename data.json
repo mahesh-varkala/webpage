@@ -1,0 +1,163 @@
+[
+  {
+    "state": "Andhra Pradesh",
+    "cases": 7,
+    "foreignCases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "state": "Bihar",
+    "cases": 2,
+    "foreignCases": 0,
+    "deaths": 1,
+    "recovered": 1
+  },
+  {
+    "state": "Chhattisgarh",
+    "cases": 1,
+    "foreignCases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "state": "Delhi",
+    "cases": 30,
+    "foreignCases": 1,
+    "deaths": 1,
+    "recovered": 6
+  },
+  {
+    "state": "Gujarat",
+    "cases": 29,
+    "foreignCases": 0,
+    "deaths": 1,
+    "recovered": 1
+  },
+  {
+    "state": "Haryana",
+    "cases": 12,
+    "foreignCases": 14,
+    "deaths": 0,
+    "recovered": 11
+  },
+  {
+    "state": "Himachal Pradesh",
+    "cases": 3,
+    "foreignCases": 0,
+    "deaths": 1,
+    "recovered": 1
+  },
+  {
+    "state": "Karnataka",
+    "cases": 37,
+    "foreignCases": 0,
+    "deaths": 1,
+    "recovered": 2
+  },
+  {
+    "state": "Kerala",
+    "cases": 87,
+    "foreignCases": 8,
+    "deaths": 0,
+    "recovered": 4
+  },
+  {
+    "state": "Madhya Pradesh",
+    "cases": 7,
+    "foreignCases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "state": "Maharashtra",
+    "cases": 84,
+    "foreignCases": 3,
+    "deaths": 1,
+    "recovered": 2
+  },
+  {
+    "state": "Odisha",
+    "cases": 2,
+    "foreignCases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "state": "Puducherry",
+    "cases": 1,
+    "foreignCases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "state": "Punjab",
+    "cases": 21,
+    "foreignCases": 0,
+    "deaths": 1,
+    "recovered": 1
+  },
+  {
+    "state": "Rajasthan",
+    "cases": 31,
+    "foreignCases": 2,
+    "deaths": 0,
+    "recovered": 3
+  },
+  {
+    "state": "Tamil Nadu",
+    "cases": 10,
+    "foreignCases": 2,
+    "deaths": 0,
+    "recovered": 1
+  },
+  {
+    "state": "Telengana",
+    "cases": 22,
+    "foreignCases": 10,
+    "deaths": 0,
+    "recovered": 1
+  },
+  {
+    "state": "Chandigarh",
+    "cases": 6,
+    "foreignCases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "cases": 4,
+    "foreignCases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "state": "Ladakh",
+    "cases": 13,
+    "foreignCases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "state": "Uttar Pradesh",
+    "cases": 32,
+    "foreignCases": 1,
+    "deaths": 0,
+    "recovered": 9
+  },
+  {
+    "state": "Uttarakhand",
+    "cases": 3,
+    "foreignCases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "state": "West Bengal",
+    "cases": 7,
+    "foreignCases": 0,
+    "deaths": 1,
+    "recovered": 1
+  }
+]
